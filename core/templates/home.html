@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+<head>
+  <title>Caos NEWS</title> 
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  {% load static %}
+
+
+  <link href="{% static 'css/bootstrap.min.css' %}" type="text/css" rel="stylesheet"> 
+  <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" >
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>  
+
+</head>
+<body>
+  <nav class="navbar navbar-expand-sm sticky-top navbar-dark bg-dark">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#opciones">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+   
+    <!-- aqui va el logo -->
+    <a class="navbar-brand" href="{% url 'home' %}">
+      <img src="{% static 'img/images.png' %}" width="60" height="60" alt="">
+    </a>
+    
+    <!-- enlaces -->
+    <div class="collapse navbar-collapse" id="opciones">   
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'home' %}">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'colaborador' %}">Colaborador</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'vercolaborador' %}">Ver Colaborador</a>
+        </li>         
+      </ul>
+    </div>
+  </nav>
+
+  <div class="main">
+    <div class="container">
+      <!-- carrusel -->
+      <div id="carousel1" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carousel1" data-slide-to="0" class="active"></li>
+          <li data-target="#carousel1" data-slide-to="1"></li>
+          <li data-target="#carousel1" data-slide-to="2"></li>
+        </ol>
+        <!-- diapositivas -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="d-block img-fluid align-items-center" src="{% static 'img/COVID19.jpg' %}" alt="">
+              <div class="carousel-caption">
+              </div>
+          </div>
+          <div class="carousel-item">
+              <img class="d-block w-100" src="{% static 'img/imagen2.png' %}" alt="">
+              <div class="carousel-caption">
+              </div>
+          </div>
+          <div class="carousel-item">
+              <img class="d-block w-100" src="{% static 'img/imagen1.jpg' %}" alt="">
+              <div class="carousel-caption">
+              </div>
+          </div>
+        </div>
+        <!-- botones de desplazamiento a izquierda y derecha -->      
+        <a class="carousel-control-prev" href="#carousel1" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Anterior</span>
+        </a>
+        <a class="carousel-control-next" href="#carousel1" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Siguiente</span>
+        </a>
+      </div>
+  </div>  
+
+<!-- footer -->
+<footer class="bg-dark text-center text-white">
+  <div class="container">
+      <ul class="list-unstyled">
+        <li class="logo">
+          <a href="http://www.twitter.com">
+            <i class="bi bi-twitter"></i>
+          </a>
+        </li>
+        <li class="logo">
+          <a href="https://www.facebook.com/DuoTech-104800851724905">
+            <i class="bi bi-facebook"></i>
+          </a>
+        </li>
+        <li class="logo">
+          <a href="https://www.instagram.com/duotech2021/">
+            <i class="bi bi-instagram"></i>
+          </a>
+        </li>
+      </ul>
+      <span id="copyright" class="text-center p-3">Gianfranco Jara @Copyright 2021 Derechos reservados</span>
+    </footer>
+
+  </div>
+</body>
+</html>
